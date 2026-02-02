@@ -13,8 +13,19 @@ public class FindElementById {
         driver.manage().window().maximize();
         driver.get("file://C:\\Users\\pc\\IdeaProjects\\QAcart_Selenium\\src\\test\\resources\\index.html");
 
-        String elementText = driver.findElement(By.id("welcome")).getText();
-        System.out.println(elementText);
+       // String elementText = driver.findElement(By.id("welcome")).getText();
+       // String elementName = driver.findElement(By.name("description")).getText();
+       // String className = driver.findElement(By.className("list1")).getText();
+       // String tagName = driver.findElement(By.tagName("li")).getText();
+       // String linkText = driver.findElement(By.linkText("Go to About Page")).getText();
+        String partialLinkText = driver.findElement(By.partialLinkText("About Page")).getText();
+        System.out.println(partialLinkText);
         driver.quit();
+
+        //Xpath
+        /*
+        Xpath Expression
+        // tagName[@attribute = 'value']
+         */
     }
 }
