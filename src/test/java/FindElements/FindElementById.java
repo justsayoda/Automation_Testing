@@ -18,14 +18,16 @@ public class FindElementById {
        // String className = driver.findElement(By.className("list1")).getText();
        // String tagName = driver.findElement(By.tagName("li")).getText();
        // String linkText = driver.findElement(By.linkText("Go to About Page")).getText();
-        String partialLinkText = driver.findElement(By.partialLinkText("About Page")).getText();
-        System.out.println(partialLinkText);
+       // String partialLinkText = driver.findElement(By.partialLinkText("About Page")).getText();
+        String XPath = driver.findElement(By.xpath("//*[@data-testid = 'welcome-header']")).getText();
+        System.out.println(XPath);
         driver.quit();
 
         //Xpath
         /*
         Xpath Expression
         // tagName[@attribute = 'value']
+        $x("//tagName[@attribute='value']")
          */
     }
 }
